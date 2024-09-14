@@ -1,0 +1,249 @@
+body {
+  font-family: 'Concert One', 'Lalezar', sans-serif;
+  background-color: #1e1e2e;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.todo-app {
+  background-color: #2d2d44;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  color: #f05454;
+  font-size: 2rem;
+}
+
+.filters {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  padding: 8px;
+  background-color: #f05454;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Concert One', 'Lalezar', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.filters button:hover {
+  background-color: #c04444;
+}
+
+.new-task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.new-task input {
+  padding: 10px;
+  border: 2px solid #f05454;
+  border-radius: 8px;
+  background-color: #3c3c57;
+  color: white;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 400px;
+  font-size: 1rem;
+}
+
+.priority-options {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.priority-options label {
+  margin-right: 20px;
+  font-size: 1rem;
+}
+
+.new-task button {
+  padding: 10px 20px;
+  background-color: #f05454;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Concert One', 'Lalezar', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.new-task button:hover {
+  background-color: #c04444;
+}
+
+.new-task select {
+  padding: 10px;
+  border: 2px solid #f05454;
+  border-radius: 8px;
+  background-color: #3c3c57;
+  color: white;
+  margin-left: 10px;
+}
+
+.low {
+  color: #00aaff;
+}
+
+.medium {
+  color: #ffaa00;
+}
+
+.high {
+  color: #ff5555;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #f05454;
+  font-size: 1.2rem;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0;
+}
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
+li {
+  background-color: #3c3c57;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+li.completed {
+  opacity: 0.7;
+}
+
+
+li.completed span{
+  text-decoration: line-through;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-grow: 1;
+}
+
+label input[type="checkbox"] {
+  appearance: none;
+  background-color: transparent;
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f05454;
+  border-radius: 50%;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+label input[type="checkbox"]:checked {
+  background-color: #f05454;
+  border-color: #f05454;
+}
+
+label input[type="checkbox"]:checked::before {
+  content: '✔';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+button.delete-btn {
+  background-color: #f05454;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Concert One', 'Lalezar', sans-serif;
+}
+
+button.delete-btn:hover {
+  background-color: #c04444;
+}
+
+span {
+  flex-grow: 1;
+  word-wrap: break-word;
+}
+
+.new-task input:focus {
+  outline: none;
+  border: 2px solid #ff5555;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.custom-radio input {
+  display: none;
+}
+
+.radio-circle {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f05454;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  margin-right: 8px;
+}
+
+.custom-radio input:checked + .radio-circle::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #f05454;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

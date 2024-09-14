@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mich Todo App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Lalezar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="todo-app">
+    <h1>Todo List</h1>
+
+    <div class="filters">
+      <button onclick="filterTasks('all')">All</button>
+      <button onclick="filterTasks('completed')">Completed</button>
+      <button onclick="filterTasks('pending')">Pending</button>
+    </div>
+
+    <div class="stats">
+      <span id="completed-count">Completed: 0</span>
+      <span id="pending-count">Pending: 0</span>
+    </div>
+
+    <div class="new-task">
+      <input type="text" id="task-input" placeholder="Add new task...">
+      
+      <div class="priority-options">
+        <label class="custom-radio">
+          <input type="radio" name="priority" value="low" checked>
+          <span class="radio-circle"></span> Low
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="priority" value="medium">
+          <span class="radio-circle"></span> Medium
+        </label>
+        <label class="custom-radio">
+          <input type="radio" name="priority" value="high">
+          <span class="radio-circle"></span> High
+        </label>
+      </div>
+
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <ul id="task-list"></ul>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
